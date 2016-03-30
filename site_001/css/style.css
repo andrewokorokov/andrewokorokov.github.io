@@ -365,7 +365,7 @@ header {
   background-image: url("../img/photoset_01.jpg");
 }
 /*============ QUERRIES ============*/
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   h1 {
     font-size: 6vw;
   }
