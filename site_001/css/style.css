@@ -356,13 +356,13 @@ header {
   background-image: url("../img/photoset_04.jpg");
 }
 #post_cover_1 {
-  background-image: url("../img/slider_03.jpg");
+  background-image: url("../img/photoset_01.jpg");
 }
 #post_cover_2 {
   background-image: none;
 }
 #post_cover_3 {
-  background-image: url("../img/photoset_01.jpg");
+  background-image: url("../img/photoset_02.jpg");
 }
 /*============ QUERRIES ============*/
 @media screen and (max-width: 600px) {
