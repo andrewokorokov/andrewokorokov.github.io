@@ -129,11 +129,18 @@ var sidebar = {
       id('sidebar').style.left = count + 'px';
       if (count == 0) cancelAnimationFrame(this.request);
     })();
+  },
+  hide: function(){
+    var that = this;
+    var count = 0;
+    id('sidebar').style.left = count + 'px';
+    (function hideSidebar(){
+      this.request = requestAnimationFrame(hideSidebar);
+      count -= 10;
+      id('sidebar').style.left = count + 'px';
+      if (count == -300) cancelAnimationFrame(this.request);
+    })();
   }
-}
-
-function id(ids){
-  return document.getElementById(ids);
 }
 
 window.onload = function(){

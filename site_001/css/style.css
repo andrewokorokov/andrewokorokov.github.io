@@ -1,43 +1,43 @@
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-extralight-webfont.ttf") format('truetype');
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-light-webfont.ttf") format('truetype');
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-regular-webfont.ttf") format('truetype');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-medium-webfont.ttf") format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-semibold-webfont.ttf") format('truetype');
-  font-weight: bold;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-bold-webfont.ttf") format('truetype');
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-extrabold-webfont.ttf") format('truetype');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 body {
@@ -48,7 +48,7 @@ body {
   padding: 0;
   color: #fff;
   font-family: 'Dosis';
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: 1px;
   line-height: 1;
   text-align: center;
@@ -64,7 +64,7 @@ h2,
 h3,
 p {
   margin: 0;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.2;
 }
 h1 {
@@ -185,6 +185,7 @@ header {
   width: 25vw;
   height: 25vw;
   background: #201c1e;
+  -webkit-filter: grayscale(100%);
 }
 .feature_inf {
   display: flex;
@@ -326,16 +327,16 @@ header {
   background-size: cover;
 }
 #ftr_img_1 {
-  background-image: url("../img/photoset_01.jpg");
+  background-image: url("../img/features_01.jpg");
 }
 #ftr_img_2 {
-  background-image: url("../img/photoset_03.jpg");
+  background-image: url("../img/features_02.jpg");
 }
 #ftr_img_3 {
-  background-image: url("../img/photoset_02.jpg");
+  background-image: url("../img/features_03.jpg");
 }
 #ftr_img_4 {
-  background-image: url("../img/photoset_04.jpg");
+  background-image: url("../img/features_04.jpg");
 }
 #video_cover_1 {
   background-image: url("../img/video_1.jpg");
