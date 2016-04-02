@@ -137,7 +137,7 @@ h3 {
   margin-top: 5px;
 }
 .text {
-  margin: 2vw auto 1vw auto;
+  margin: 2vw auto 0 auto;
   color: rgba(255,255,255,0.3);
   text-align: left;
   font-size: 13px;
