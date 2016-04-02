@@ -1,45 +1,3 @@
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-extralight-webfont.ttf") format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-light-webfont.ttf") format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-regular-webfont.ttf") format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-medium-webfont.ttf") format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-semibold-webfont.ttf") format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-bold-webfont.ttf") format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'dosis';
-  src: url("../fonts/dosis-extrabold-webfont.ttf") format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
 body {
   background: #000;
   width: 100vw;
@@ -364,41 +322,47 @@ header {
   width: calc(17vw + 2px);
   height: calc(3.5vw + 2px);
 }
-/*============ ARROWS ============*/
-#video_arrow_1:before,
-#photo_arrow_1:before,
-#photo_arrow_2:before {
-  height: 0;
-  content: '';
-  position: absolute;
-  z-index: 2;
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-extralight-webfont.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
 }
-#video_arrow_1:before {
-  top: 2vw;
-  left: -3.75vw;
-  border: 2vw solid transparent;
-  border-right: 2vw solid #201c1e;
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-light-webfont.ttf") format('truetype');
+  font-weight: 200;
+  font-style: normal;
 }
-#video_arrow_2:after {
-  content: '';
-  position: absolute;
-  height: 0;
-  top: 2vw;
-  z-index: 2;
-  border: 2vw solid transparent;
-  border-left: 2vw solid #201c1e;
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-regular-webfont.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
-#photo_arrow_1:before {
-  top: -3.75vw;
-  left: 2vw;
-  border: 2vw solid transparent;
-  border-bottom: 2vw solid #201c1e;
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-medium-webfont.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
-#photo_arrow_2:before {
-  top: 15vw;
-  left: 2vw;
-  border: 2vw solid transparent;
-  border-top: 2vw solid #201c1e;
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-semibold-webfont.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-bold-webfont.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosis';
+  src: url("../fonts/dosis-extrabold-webfont.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 #slider_photo_1,
 #ftr_img_1,
@@ -458,6 +422,41 @@ header {
 }
 #join_banner {
   background-image: url("../img/frame_01.jpg");
+}
+#video_arrow_1:before,
+#photo_arrow_1:before,
+#photo_arrow_2:before {
+  height: 0;
+  content: '';
+  position: absolute;
+  z-index: 2;
+}
+#video_arrow_1:before {
+  top: 2vw;
+  left: -3.75vw;
+  border: 2vw solid transparent;
+  border-right: 2vw solid #201c1e;
+}
+#video_arrow_2:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  top: 2vw;
+  z-index: 2;
+  border: 2vw solid transparent;
+  border-left: 2vw solid #201c1e;
+}
+#photo_arrow_1:before {
+  top: -3.75vw;
+  left: 2vw;
+  border: 2vw solid transparent;
+  border-bottom: 2vw solid #201c1e;
+}
+#photo_arrow_2:before {
+  top: 15vw;
+  left: 2vw;
+  border: 2vw solid transparent;
+  border-top: 2vw solid #201c1e;
 }
 @media screen and (max-width: 600px) {
   h1 {
