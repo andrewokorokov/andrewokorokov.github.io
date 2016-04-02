@@ -2,7 +2,6 @@ var slider = {
 
   imageUrls: [
     'url(./img/frame_01.jpg)',
-    'url(./img/frame_02.jpg)',
     'url(./img/frame_03.jpg)',
     'url(./img/frame_04.jpg)',
     'url(./img/frame_05.jpg)'
