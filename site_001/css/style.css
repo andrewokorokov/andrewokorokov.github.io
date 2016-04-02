@@ -234,7 +234,7 @@ header {
 }
 .feature_inf {
   display: flex;
-  background: rgba(32,28,30,0.7);
+  background: rgba(32,28,30,0.5);
   width: 100%;
   height: 100%;
 }
@@ -308,19 +308,27 @@ header {
 .post_cover {
   height: calc(100vw / 3);
   background: #201c1e;
+  -webkit-filter: grayscale(100%);
+  transition: -webkit-filter 1s;
+}
+.post_cover:hover {
+  -webkit-filter: grayscale(0%);
 }
 .post_inf {
   position: relative;
   display: flex;
-  background: rgba(32,28,30,0.7);
+  background: rgba(32,28,30,0.5);
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
 /*============ JOIN BANNER ============*/
+#join_banner {
+  -webkit-filter: grayscale(100%);
+}
 .join_first_step {
   display: flex;
-  background: rgba(32,28,30,0.7);
+  background: rgba(32,28,30,0.8);
   height: 35vw;
 }
 .join_label {
