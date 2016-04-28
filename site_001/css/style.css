@@ -322,6 +322,11 @@ header {
   width: calc(17vw + 2px);
   height: calc(3.5vw + 2px);
 }
+/*============ FOOTER ============*/
+footer {
+  height: 10vw;
+  background: #201c1e;
+}
 @font-face {
   font-family: 'dosis';
   src: url("../fonts/dosis-extralight-webfont.ttf") format('truetype');
