@@ -1,34 +1,46 @@
 function $ (name) {
-	var cName = name.slice(1);
+	var path = name.split(" "),
+		id = ".getElementById",
+		classes = ".getElementsByClassName",
+		tags = ".getElementsByTagName",
+		domNode = "", x, tempName;
 
-	if (name[0] == '#') {
-		return document.getElementById(cName);
-	};
+	for (x = 0; x < path.length; x++) {
+		tempName = path[x];
 
-	if (name[0] == '.') {
-		if (document.getElementsByClassName(cName).length > 1) {
-			return document.getElementsByClassName(cName);
+		if (tempName[0] == "#") {
+			domNode += id + "('" + tempName.slice(1) + "')";
+		};
 
-		} else {
-			return document.getElementsByClassName(cName)[0];
+		if (tempName[0] == ".") {
+			if (tempName.slice(tempName.length - 1) == "]") {
+				domNode += classes + "('" + tempName.slice(1).split("[")[0] + "')";
+				domNode += "[" + tempName.split("[")[1];
+
+			} else {
+				domNode += classes + "('" + tempName.slice(1) + "')";
+			};
+		};
+
+		if (tempName[0] == ">") {
+			if (tempName.slice(tempName.length - 1) == "]") {
+				domNode += tags + "('" + tempName.slice(1).split("[")[0] + "')";
+				domNode += "[" + tempName.split("[")[1];
+				
+			} else {
+				domNode += tags + "('" + tempName.slice(1) + "')";
+			};
 		};
 	};
 
-	if (name[0] == '>') {
-		if (document.getElementsByTagName(cName).length > 1) {
-			return document.getElementsByTagName(cName);
-
-		} else {
-			return document.getElementsByTagName(cName)[0];
-		};
-	};
+	return eval("document" + domNode);
 };
 
 function range (start, end, step) {
 	var result = [];
 
 	if (start == undefined) {
-		return console.log('Error. No arguments added!');
+		return console.log("Error. No arguments added!");
 	};
 
 	if (end == undefined && step == undefined) {
