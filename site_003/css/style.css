@@ -1,0 +1,47 @@
+body {
+  background: #fff;
+  margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6.25vw;
+}
+.menu {
+  margin-left: 6.25vw;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+.menu .menu-line {
+  margin-top: 5px;
+  width: 27px;
+  height: 2px;
+  background: #000;
+}
+.menu .menu-line:first-child {
+  margin-top: 0;
+}
+.menu:hover {
+  opacity: 0.3;
+}
+.logo {
+  height: 100%;
+}
+.logo img {
+  width: 35vw;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+.logo img:hover {
+  opacity: 0.3;
+}
+.pad {
+  width: calc(27px + 6.25vw);
+}
+@media screen and (max-width: 600px) {
+  .logo img {
+    width: 55vw;
+  }
+}
