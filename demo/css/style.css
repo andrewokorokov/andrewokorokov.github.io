@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'montserratblack';
+  src: url("../fonts/montserrat-black-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratbold';
+  src: url("../fonts/montserrat-bold-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrathairline';
+  src: url("../fonts/montserrat-hairline-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratlight';
+  src: url("../fonts/montserrat-light-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserratregular';
+  src: url("../fonts/montserrat-regular-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -5,7 +35,7 @@ body {
   height: 100vh;
   margin: 0;
   background: #000;
-  font-family: 'Montserrat';
+  font-family: 'montserratbold';
   color: #fff;
   text-align: center;
   overflow: hidden;
@@ -34,7 +64,7 @@ h1 {
 }
 h2 {
   font-size: 25px;
-  font-weight: normal;
+  font-family: 'montserratregular';
 }
 h3 {
   font-size: 13px;
@@ -51,7 +81,7 @@ button {
   background: none;
   border: 1px solid #fff;
   border-radius: 3px;
-  font-family: 'Montserrat';
+  font-family: 'montserratbold';
   font-weight: bold;
   color: #fff;
   transition: border 0.4s, opacity 0.8s;

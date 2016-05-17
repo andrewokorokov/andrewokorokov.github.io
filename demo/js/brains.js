@@ -101,8 +101,8 @@ var show = {
 		var backX = shiftX / 32 - 5;
 		var backY = shiftY / 24 - 5;
 
-		$('buttons')[0].style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 0.05px)';
-		$('info')[0].style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 0.05px)';
+		// $( 'buttons' )[0].style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
+		// $( 'info' )[0].style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
 		$('background')[0].style.transform = 'translate3d(' + backX + '%, ' + backY + '%, 0.05px)';
 	},
 
@@ -121,6 +121,14 @@ var show = {
 function $(name) {
 	return document.getElementsByClassName(name);
 }
+
+// function classes( name, id ) {
+// 	if ( id ) {
+// 		return get document.getElementsByClassName( name )[id]
+// 	} else {
+// 		return get document.getElementsByClassName( name )[0]
+// 	}
+// }
 
 document.body.onmousemove = function () {
 	show.paralax();
