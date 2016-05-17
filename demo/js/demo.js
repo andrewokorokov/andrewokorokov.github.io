@@ -1,22 +1,21 @@
+'use strict';
 
-var demo = [
-
-	// 01 frame
-	{
-		theme: 'Crowdfinding widget',
-		speaker: people.kai
-	},
-
-	// 02 frame
-	{
-		theme: 'Digital shop',
-		speaker: people.goofy
-	},
-
-	// 03 frame
-	{
-		theme: 'Magic popup',
-		speaker: people.nightwoolf
-	}
-
-];
+var demo = [{
+	theme: 'Crowdfinding widget',
+	speaker: people.kai
+}, {
+	theme: 'Digital shop',
+	speaker: people.goofy
+}, {
+	theme: 'Magic popup',
+	speaker: people.nightwoolf
+}, {
+	theme: 'Restyling MC admin',
+	speaker: people.kai
+}, {
+	theme: 'Magic popup',
+	speaker: people.nightwoolf
+}, {
+	theme: 'Restyling MC admin',
+	speaker: people.kai
+}];

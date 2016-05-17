@@ -1,3 +1,5 @@
+'use strict';
+
 var people = {
 
 	kai: {
@@ -18,4 +20,4 @@ var people = {
 		photo: './img/people_nightwoolf.png'
 	}
 
-}
+};
