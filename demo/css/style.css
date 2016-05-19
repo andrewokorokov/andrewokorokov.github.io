@@ -40,27 +40,10 @@ body {
   text-align: center;
   overflow: hidden;
 }
-.background {
-  position: absolute;
-  background-image: url("../img/001.jpg");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  transition: transform 1.5s cubic-bezier(0, 0, 0, 1);
-  width: 110%;
-  height: 110%;
-  z-index: 1;
-}
 h1 {
   margin-top: 0;
   font-size: 5vw;
   font-weight: bold;
-}
-.theme-title {
-  width: 65vw;
-}
-.start-title {
-  font-size: 8vw;
 }
 h2 {
   font-size: 25px;
@@ -70,8 +53,13 @@ h3 {
   font-size: 13px;
   font-weight: bold;
 }
-.speaker-pic {
-  border-radius: 50%;
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.4s;
+}
+a:hover {
+  opacity: 0.7;
 }
 button {
   margin: 0;
@@ -96,27 +84,16 @@ button:focus {
 button:active {
   transform: translate(0, 2%);
 }
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.4s;
-}
-a:hover {
-  opacity: 0.7;
-}
-.disactivate {
-  opacity: 0.2;
-  cursor: default;
-}
-.disactivate:hover {
-  border: 1px solid #fff;
-}
-.info {
-  transition: opacity 0.4s, transform 1.5s cubic-bezier(0, 0, 0, 1);
-}
-.buttons {
-  margin-top: 10vw;
+.background {
+  position: absolute;
+  background-image: url("../img/001.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
   transition: transform 1.5s cubic-bezier(0, 0, 0, 1);
+  width: 110%;
+  height: 110%;
+  z-index: 1;
 }
 .shader {
   display: flex;
@@ -127,6 +104,28 @@ a:hover {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
   z-index: 2;
+}
+.info {
+  transition: opacity 0.4s;
+}
+.theme-title {
+  width: 65vw;
+}
+.start-title {
+  font-size: 8vw;
+}
+.speaker-pic {
+  border-radius: 50%;
+}
+.buttons {
+  margin-top: 10vw;
+}
+.disactivate {
+  opacity: 0.2;
+  cursor: default;
+}
+.disactivate:hover {
+  border: 1px solid #fff;
 }
 .navigator {
   position: absolute;
