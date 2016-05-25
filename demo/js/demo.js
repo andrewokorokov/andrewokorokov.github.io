@@ -20,11 +20,15 @@ var demo = [{
 	theme: 'Stats report: Profit & Lose',
 	speaker: people.columbus,
 	desc: ''
-}, {
-	theme: 'Social sharing cards',
-	speaker: people.goodluck,
-	desc: ''
-}, {
+},
+
+// {
+// 	theme: 'Social sharing cards',
+// 	speaker: people.goodluck,
+// 	desc: ''
+// },
+
+{
 	theme: 'Intercom: New fields',
 	speaker: people.goodluck,
 	desc: ''
