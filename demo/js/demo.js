@@ -1,21 +1,35 @@
 'use strict';
 
 var demo = [{
-	theme: 'Crowdfinding widget',
-	speaker: people.kai
+	theme: 'Pay Per minute',
+	speaker: people.subzero,
+	desc: ''
 }, {
-	theme: 'Digital shop',
-	speaker: people.goofy
+	theme: 'Load speed optimization',
+	speaker: people.alexp,
+	desc: ''
 }, {
-	theme: 'Magic popup',
-	speaker: people.nightwoolf
+	theme: 'Intercom: New fields',
+	speaker: people.goodluck,
+	desc: ''
 }, {
-	theme: 'Restyling MC admin',
-	speaker: people.kai
+	theme: 'Promo tools: Zipped packages',
+	speaker: people.nightwoolf,
+	desc: ''
 }, {
-	theme: 'Magic popup',
-	speaker: people.nightwoolf
+	theme: 'Promo tools: Content watermarks',
+	speaker: people.knoxville,
+	desc: ''
 }, {
-	theme: 'Restyling MC admin',
-	speaker: people.kai
+	theme: 'Stats report: Profit & Lose',
+	speaker: people.columbus,
+	desc: ''
+}, {
+	theme: 'MCProfits: Registration',
+	speaker: people.subzero,
+	desc: ''
+}, {
+	theme: 'Social sharing cards',
+	speaker: people.goodluck,
+	desc: ''
 }];

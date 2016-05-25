@@ -106,19 +106,29 @@ button:active {
   z-index: 2;
 }
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
   transition: opacity 0.4s;
 }
 .theme-title {
-  width: 65vw;
+  margin-bottom: 0;
 }
 .start-title {
   font-size: 8vw;
 }
-.speaker-pic {
-  border-radius: 50%;
+.theme-description {
+  width: 40vw;
+  opacity: 0.5;
+}
+.speaker-name {
+  margin-top: 5vw;
+  margin-bottom: 0;
 }
 .buttons {
-  margin-top: 10vw;
+  margin-top: 5vw;
 }
 .disactivate {
   opacity: 0.2;

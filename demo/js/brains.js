@@ -1,17 +1,20 @@
 'use strict';
 
 var show = {
+
 	next: function next() {
 		if (this.counter < demo.length - 1) {
 			this.counter += 1;
 
 			this.animate(this.counter);
-			this.activate(elm('.prev'));
+			this.activate(get('.prev'));
 
-			elm('.themes[' + (this.counter - 1) + ']').style.opacity = 0.3;
-			elm('.themes[' + this.counter + ']').style.opacity = 1;
+			get('.themes[' + (this.counter - 1) + ']').style.opacity = 0.3;
+			get('.themes[' + this.counter + ']').style.opacity = 1;
 
-			if (this.counter === demo.length - 1) this.disactivate(elm('.next'));
+			if (this.counter === demo.length - 1) {
+				this.disactivate(get('.next'));
+			}
 		}
 	},
 
@@ -20,21 +23,23 @@ var show = {
 			this.counter -= 1;
 
 			this.animate(this.counter);
-			this.activate(elm('.next'));
+			this.activate(get('.next'));
 
-			elm('.themes[' + (this.counter + 1) + ']').style.opacity = 0.3;
-			elm('.themes[' + this.counter + ']').style.opacity = 1;
+			get('.themes[' + (this.counter + 1) + ']').style.opacity = 0.3;
+			get('.themes[' + this.counter + ']').style.opacity = 1;
 
-			if (this.counter === 0) this.disactivate(elm('.prev'));
+			if (this.counter === 0) {
+				this.disactivate(get('.prev'));
+			}
 		}
 	},
 
 	animate: function animate(counter) {
-		elm('.info').style.opacity = 0;
+		get('.info').style.opacity = 0;
 
 		setTimeout(function () {
 			this.draw(counter);
-			elm('.info').style.opacity = 1;
+			get('.info').style.opacity = 1;
 		}.bind(this), 400);
 	},
 
@@ -47,26 +52,27 @@ var show = {
 	},
 
 	draw: function draw(counter) {
-		elm('.theme-title').innerHTML = demo[counter].theme;
-		elm('.speaker-name').innerHTML = demo[counter].speaker.name;
-		elm('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
-		elm('.speaker-pic').setAttribute('src', demo[counter].speaker.photo);
+		get('.theme-title').innerHTML = demo[counter].theme;
+		get('.theme-description').innerHTML = demo[counter].desc;
+		get('.speaker-name').innerHTML = demo[counter].speaker.name;
+		get('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
+		// get( '.speaker-pic' ).setAttribute( 'src', demo[counter].speaker.photo )
 	},
 
 	defaults: function defaults() {
 		show['counter'] = 0;
 
 		this.draw(this.counter);
-		this.disactivate(elm('.prev'));
+		this.disactivate(get('.prev'));
 
 		for (var x in range(demo.length)) {
 			crt('div', '.themes', '.navigator');
 			crt('div', '.point', '.themes[' + x + ']');
 			crt('div', '.theme', '.themes[' + x + ']');
-			elm('.theme[' + x + ']').innerHTML = demo[x].theme;
+			get('.theme[' + x + ']').innerHTML = demo[x].theme;
 		}
 
-		elm('.themes[' + this.counter + ']').style.opacity = 1;
+		get('.themes[' + this.counter + ']').style.opacity = 1;
 	},
 
 	paralax: function paralax() {
@@ -79,9 +85,9 @@ var show = {
 		    backX = shiftX / 32 - 5,
 		    backY = shiftY / 24 - 5;
 
-		// elm( '.buttons' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
-		// elm( '.info' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
-		elm('.background').style.transform = 'translate3d(' + backX + '%, ' + backY + '%, 0.05px)';
+		// get( '.buttons' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
+		// get( '.info' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
+		get('.background').style.transform = 'translate3d(' + backX + '%, ' + backY + '%, 0.05px)';
 	},
 
 	onkeys: function onkeys() {
@@ -99,5 +105,5 @@ document.body.onkeydown = function () {
 };
 
 window.onload = function () {
-	if (elm('.navigator')) show.defaults();
+	if (get('.navigator')) show.defaults();
 };

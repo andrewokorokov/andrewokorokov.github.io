@@ -4,7 +4,7 @@
 *		Function Get Element
 */
 
-function elm(name) {
+function get(name) {
 	var names = name.split(/\s/),
 	    target = document;
 
@@ -14,9 +14,15 @@ function elm(name) {
 		    elementName = splitter[2],
 		    index = !splitter[3] ? 0 : splitter[3];
 
-		if (type === '#') target = target.getElementById(elementName);
-		if (type === '.') target = target.getElementsByClassName(elementName)[index];
-		if (type === '>') target = target.getElementsByTagName(elementName)[index];
+		if (type === '#') {
+			target = target.getElementById(elementName);
+		}
+		if (type === '.') {
+			target = target.getElementsByClassName(elementName)[index];
+		}
+		if (type === '>') {
+			target = target.getElementsByTagName(elementName)[index];
+		}
 	});
 
 	return target;
@@ -35,11 +41,15 @@ function crt(tag, name, parent) {
 		    type = splitter[1],
 		    elementName = splitter[2];
 
-		if (type === '#') element.setAttribute('id', splitter[2]);
-		if (type === '.') element.classList.add(splitter[2]);
+		if (type === '#') {
+			element.setAttribute('id', splitter[2]);
+		}
+		if (type === '.') {
+			element.classList.add(splitter[2]);
+		}
 	});
 
-	elm(parent).appendChild(element);
+	get(parent).appendChild(element);
 }
 
 /**
@@ -58,5 +68,7 @@ function range() {
 	}
 	for (var x = start; x < end; x += step) {
 		result.push(x);
-	}return result;
+	}
+
+	return result;
 }
