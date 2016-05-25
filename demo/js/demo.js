@@ -2,7 +2,7 @@
 
 var demo = [{
 	theme: 'Pay Per minute',
-	speaker: people.subzero,
+	speaker: people.kai,
 	desc: ''
 }, {
 	theme: 'Promo tools: Zipped packages',
