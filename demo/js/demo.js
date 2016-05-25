@@ -28,8 +28,4 @@ var demo = [{
 	theme: 'Intercom: New fields',
 	speaker: people.goodluck,
 	desc: ''
-}, {
-	theme: 'Load speed optimization',
-	speaker: people.alexp,
-	desc: ''
 }];
