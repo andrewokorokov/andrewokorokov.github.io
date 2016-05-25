@@ -17,9 +17,11 @@ function get(name) {
 		if (type === '#') {
 			target = target.getElementById(elementName);
 		}
+
 		if (type === '.') {
 			target = target.getElementsByClassName(elementName)[index];
 		}
+
 		if (type === '>') {
 			target = target.getElementsByTagName(elementName)[index];
 		}
@@ -44,6 +46,7 @@ function crt(tag, name, parent) {
 		if (type === '#') {
 			element.setAttribute('id', splitter[2]);
 		}
+
 		if (type === '.') {
 			element.classList.add(splitter[2]);
 		}
@@ -64,8 +67,10 @@ function range() {
 	var result = [];
 
 	if (!end) {
-		end = start;start = 0;
+		end = start;
+		start = 0;
 	}
+
 	for (var x = start; x < end; x += step) {
 		result.push(x);
 	}
