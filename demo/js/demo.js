@@ -1,31 +1,39 @@
 'use strict';
 
 var demo = [{
-	theme: 'Pay Per minute',
-	speaker: people.kai,
+	theme: 'Twitter cards',
+	speaker: people.goodluck,
 	desc: ''
 }, {
-	theme: 'Promo tools: Zipped packages',
+	theme: 'Live show monitoring',
+	speaker: people.goofy,
+	desc: ''
+}, {
+	theme: 'Filter ZCP & Stats',
 	speaker: people.nightwoolf,
 	desc: ''
 }, {
-	theme: 'Promo tools: Content watermarks',
-	speaker: people.knoxville,
-	desc: ''
-}, {
-	theme: 'MCProfits: Registration',
+	theme: 'MCProfits',
 	speaker: people.subzero,
 	desc: ''
 }, {
-	theme: 'Stats report: Profit & Lose',
+	theme: 'Opt-in',
+	speaker: people.goodluck,
+	desc: ''
+}, {
+	theme: 'Free hosted galleries',
+	speaker: [people.nightwoolf, people.knoxville],
+	desc: ''
+}, {
+	theme: 'Traffic tags',
 	speaker: people.columbus,
 	desc: ''
 }, {
-	theme: 'Social sharing cards',
-	speaker: people.goodluck,
+	theme: 'Legal docs',
+	speaker: people.subzero,
 	desc: ''
 }, {
-	theme: 'Intercom: New fields',
-	speaker: people.goodluck,
+	theme: 'Load speed optimization',
+	speaker: people.alexp,
 	desc: ''
 }];

@@ -59,12 +59,11 @@ function crt(tag, name, parent) {
 *		Function Range
 */
 
-function range() {
-	var start = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
-	var end = arguments[1];
-	var step = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-
+function range(start, end, step) {
 	var result = [];
+
+	start = start || 0;
+	step = step || 1;
 
 	if (!end) {
 		end = start;

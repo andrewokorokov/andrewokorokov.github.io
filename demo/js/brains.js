@@ -54,9 +54,23 @@ var show = {
 	draw: function draw(counter) {
 		get('.theme-title').innerHTML = demo[counter].theme;
 		get('.theme-description').innerHTML = demo[counter].desc;
-		get('.speaker-name').innerHTML = demo[counter].speaker.name;
-		get('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
-		// get( '.speaker-pic' ).setAttribute( 'src', demo[counter].speaker.photo )
+		get('.speakers').innerHTML = '';
+
+		if (Array.isArray(demo[counter].speaker)) {
+			for (var i = 0; i < demo[counter].speaker.length; i++) {
+				crt('div', '.speaker_' + i, '.speakers');
+				crt('h2', '.speaker-name', '.speaker_' + i);
+				crt('h3', '.speaker-ocupation', '.speaker_' + i);
+				get('.speaker_' + i + ' .speaker-name').innerHTML = demo[counter].speaker[i].name;
+				get('.speaker_' + i + ' .speaker-ocupation').innerHTML = demo[counter].speaker[i].ocupation;
+			}
+		} else {
+			crt('div', '.speaker_1', '.speakers');
+			crt('h2', '.speaker-name', '.speaker_1');
+			crt('h3', '.speaker-ocupation', '.speaker_1');
+			get('.speaker-name').innerHTML = demo[counter].speaker.name;
+			get('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
+		}
 	},
 
 	defaults: function defaults() {
@@ -85,14 +99,19 @@ var show = {
 		    backX = shiftX / 32 - 5,
 		    backY = shiftY / 24 - 5;
 
-		// get( '.buttons' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
-		// get( '.info' ).style.transform = 'translate3d(' + infoX + '%, ' + infoY + '%, 1px)'
-		get('.background').style.transform = 'translate3d(' + backX + '%, ' + backY + '%, 0.05px)';
+		// get( '.buttons' ).style.transform = `translate3d( ${ infoX }%, ${ infoY }%, 1px)`;
+		get('.info').style.transform = 'translate3d( ' + infoX + '%, ' + infoY + '%, 1px)';
+		get('.background').style.transform = 'translate3d( ' + backX + '%, ' + backY + '%, 0.05px )';
 	},
 
 	onkeys: function onkeys() {
-		if (event.keyCode === 37) this.prev();
-		if (event.keyCode === 39) this.next();
+		if (event.keyCode === 37) {
+			this.prev();
+		}
+
+		if (event.keyCode === 39) {
+			this.next();
+		}
 	}
 };
 
@@ -105,5 +124,7 @@ document.body.onkeydown = function () {
 };
 
 window.onload = function () {
-	if (get('.navigator')) show.defaults();
+	if (get('.navigator')) {
+		show.defaults();
+	}
 };
