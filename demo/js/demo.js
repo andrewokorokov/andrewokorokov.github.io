@@ -10,7 +10,7 @@ var demo = [{
 	desc: ''
 }, {
 	theme: 'Zipped packages model filter + stats',
-	speaker: people.nightwoolf,
+	speaker: [people.nightwoolf, people.knoxville],
 	desc: ''
 }, {
 	theme: 'MCProfits promo site & admin panel design',
