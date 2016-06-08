@@ -173,7 +173,7 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20vh 0;
+  padding: 10vh 0;
   height: 100vh;
 }
 .themes {
@@ -191,6 +191,6 @@ button:active {
 }
 .theme {
   text-align: left;
-  width: 100px;
+  width: 130px;
   font-size: 13px;
 }
