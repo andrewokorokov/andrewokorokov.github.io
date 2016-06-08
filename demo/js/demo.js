@@ -18,11 +18,11 @@ var demo = [{
 	desc: ''
 }, {
 	theme: 'MCProfits opt-in',
-	speaker: people.goodluck,
+	speaker: [people.goodluck, people.nightwoolf],
 	desc: ''
 }, {
 	theme: 'Free hosted galleries',
-	speaker: [people.nightwoolf, people.knoxville],
+	speaker: [people.nightwoolf, people.knoxville, people.kai],
 	desc: ''
 }, {
 	theme: 'Traffic tags',
