@@ -100,7 +100,7 @@ var show = {
 		    backY = shiftY / 24 - 5;
 
 		// get( '.buttons' ).style.transform = `translate3d( ${ infoX }%, ${ infoY }%, 1px)`;
-		get('.info').style.transform = 'translate3d( ' + infoX + '%, ' + infoY + '%, 1px)';
+		// get( '.info' ).style.transform = `translate3d( ${ infoX }%, ${ infoY }%, 1px)`;
 		get('.background').style.transform = 'translate3d( ' + backX + '%, ' + backY + '%, 0.05px )';
 	},
 
