@@ -17,7 +17,7 @@ var demo = [{
 	speaker: people.subzero,
 	desc: ''
 }, {
-	theme: 'Opt-in',
+	theme: 'MCProfits opt-in',
 	speaker: people.goodluck,
 	desc: ''
 }, {
