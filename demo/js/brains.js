@@ -36,10 +36,12 @@ var show = {
 
 	animate: function animate(counter) {
 		get('.info').style.opacity = 0;
+		get('.shader').style.backgroundColor = 'rgba(0, 0, 0, 1)';
 
 		setTimeout(function () {
 			this.draw(counter);
 			get('.info').style.opacity = 1;
+			get('.shader').style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
 		}.bind(this), 400);
 	},
 
@@ -71,6 +73,8 @@ var show = {
 			get('.speaker-name').innerHTML = demo[counter].speaker.name;
 			get('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
 		}
+
+		get('.background').style.backgroundImage = 'url("./img/00' + counter + '.jpg")';
 	},
 
 	defaults: function defaults() {

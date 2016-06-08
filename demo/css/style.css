@@ -87,7 +87,7 @@ button:active {
 }
 .background {
   position: absolute;
-  background-image: url("../img/001.jpg");
+  background-image: url("../img/000.jpg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -105,6 +105,7 @@ button:active {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
   z-index: 2;
+  transition: background-color 0.8s;
 }
 .aligner {
   display: flex;
@@ -125,6 +126,7 @@ button:active {
 }
 .start-title {
   font-size: 8vw;
+  margin-top: 10vh;
 }
 .theme-description {
   width: 40vw;
