@@ -24,11 +24,15 @@ var demo = [{
 	theme: 'Free hosted galleries ',
 	speaker: [people.nightwoolf, people.knoxville, people.kai],
 	desc: ''
-}, {
-	theme: 'Traffic tags stats for affiliates',
-	speaker: people.columbus,
-	desc: ''
-}, {
+},
+
+// {
+// 	theme: 'Traffic tags stats for affiliates',
+// 	speaker: people.columbus,
+// 	desc: ''
+// },
+
+{
 	theme: 'MC legal docs update',
 	speaker: people.subzero,
 	desc: ''
