@@ -12,18 +12,18 @@ function get(name) {
 		var splitter = element.match(/(^[#.>])([\w-]+)\[*(\d+)*\]*/),
 		    type = splitter[1],
 		    elementName = splitter[2],
-		    index = !splitter[3] ? 0 : splitter[3];
+		    index = splitter[3] || 0;
 
-		if (type === '#') {
-			target = target.getElementById(elementName);
-		}
-
-		if (type === '.') {
-			target = target.getElementsByClassName(elementName)[index];
-		}
-
-		if (type === '>') {
-			target = target.getElementsByTagName(elementName)[index];
+		switch (type) {
+			case '#':
+				target = target.getElementById(elementName);
+				break;
+			case '.':
+				target = target.getElementsByClassName(elementName)[index];
+				break;
+			case '>':
+				target = target.getElementsByTagName(elementName)[index];
+				break;
 		}
 	});
 
@@ -43,12 +43,13 @@ function crt(tag, name, parent) {
 		    type = splitter[1],
 		    elementName = splitter[2];
 
-		if (type === '#') {
-			element.setAttribute('id', splitter[2]);
-		}
-
-		if (type === '.') {
-			element.classList.add(splitter[2]);
+		switch (type) {
+			case '#':
+				element.setAttribute('id', splitter[2]);
+				break;
+			case '.':
+				element.classList.add(splitter[2]);
+				break;
 		}
 	});
 

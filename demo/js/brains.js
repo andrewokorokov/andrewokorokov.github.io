@@ -73,7 +73,7 @@ var show = {
 			get('.speaker-occupation').innerHTML = demo[counter].speaker.occupation;
 		}
 
-		get('.background').style.backgroundImage = 'url("./img/00' + counter + '.jpg")';
+		document.getElementById('background').style.backgroundImage = 'url("./img/00' + counter + '.jpg")';
 	},
 
 	switchTo: function switchTo(subjectNumber) {
@@ -121,7 +121,7 @@ var show = {
 		    backX = shiftX / 32 - 5,
 		    backY = shiftY / 24 - 5;
 
-		get('.background').style.transform = 'translate3d( ' + backX + '%, ' + backY + '%, 0.05px )';
+		document.getElementById('background').style.transform = 'translate3d( ' + backX + '%, ' + backY + '%, 0.1px )';
 	},
 
 	onkeys: function onkeys() {

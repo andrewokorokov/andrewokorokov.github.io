@@ -85,7 +85,7 @@ button:focus {
 button:active {
   transform: translate(0, 2%);
 }
-.background {
+#background {
   position: absolute;
   background-image: url("../img/000.jpg");
   background-size: cover;
