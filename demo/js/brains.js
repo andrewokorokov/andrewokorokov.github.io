@@ -8,9 +8,8 @@ var show = {
 
 			this.animate(this.counter);
 			this.activate(get('.prev'));
-
-			get('.themes[' + (this.counter - 1) + ']').style.opacity = 0.3;
-			get('.themes[' + this.counter + ']').style.opacity = 1;
+			this.disactivate(get('.subjects[' + (this.counter - 1) + ']'));
+			this.activate(get('.subjects[' + this.counter + ']'));
 
 			if (this.counter === demo.length - 1) {
 				this.disactivate(get('.next'));
@@ -24,9 +23,8 @@ var show = {
 
 			this.animate(this.counter);
 			this.activate(get('.next'));
-
-			get('.themes[' + (this.counter + 1) + ']').style.opacity = 0.3;
-			get('.themes[' + this.counter + ']').style.opacity = 1;
+			this.disactivate(get('.subjects[' + (this.counter + 1) + ']'));
+			this.activate(get('.subjects[' + this.counter + ']'));
 
 			if (this.counter === 0) {
 				this.disactivate(get('.prev'));
@@ -54,27 +52,48 @@ var show = {
 	},
 
 	draw: function draw(counter) {
-		get('.theme-title').innerHTML = demo[counter].theme;
-		get('.theme-description').innerHTML = demo[counter].desc;
-		get('.speakers').innerHTML = '';
+		get('.subject-title').innerHTML = demo[counter].subject;
+		get('.subject-description').innerHTML = demo[counter].desc;
+
+		clearNode(get('.speakers'));
 
 		if (Array.isArray(demo[counter].speaker)) {
-			for (var i = 0; i < demo[counter].speaker.length; i++) {
+			for (var i in range(demo[counter].speaker.length)) {
 				crt('div', '.speaker_' + i, '.speakers');
 				crt('h2', '.speaker-name', '.speaker_' + i);
-				crt('h3', '.speaker-ocupation', '.speaker_' + i);
+				crt('h3', '.speaker-occupation', '.speaker_' + i);
 				get('.speaker_' + i + ' .speaker-name').innerHTML = demo[counter].speaker[i].name;
-				get('.speaker_' + i + ' .speaker-ocupation').innerHTML = demo[counter].speaker[i].ocupation;
+				get('.speaker_' + i + ' .speaker-occupation').innerHTML = demo[counter].speaker[i].occupation;
 			}
 		} else {
-			crt('div', '.speaker_1', '.speakers');
-			crt('h2', '.speaker-name', '.speaker_1');
-			crt('h3', '.speaker-ocupation', '.speaker_1');
+			crt('div', '.speaker_0', '.speakers');
+			crt('h2', '.speaker-name', '.speaker_0');
+			crt('h3', '.speaker-occupation', '.speaker_0');
 			get('.speaker-name').innerHTML = demo[counter].speaker.name;
-			get('.speaker-ocupation').innerHTML = demo[counter].speaker.ocupation;
+			get('.speaker-occupation').innerHTML = demo[counter].speaker.occupation;
 		}
 
 		get('.background').style.backgroundImage = 'url("./img/00' + counter + '.jpg")';
+	},
+
+	switchTo: function switchTo(subjectNumber) {
+		this.disactivate(get('.subjects[' + this.counter + ']'));
+		this.counter = subjectNumber;
+		this.activate(get('.subjects[' + this.counter + ']'));
+
+		if (this.counter === demo.length - 1) {
+			this.disactivate(get('.next'));
+		} else {
+			this.activate(get('.next'));
+		}
+
+		if (this.counter === 0) {
+			this.disactivate(get('.prev'));
+		} else {
+			this.activate(get('.prev'));
+		}
+
+		this.animate(this.counter);
 	},
 
 	defaults: function defaults() {
@@ -84,13 +103,14 @@ var show = {
 		this.disactivate(get('.prev'));
 
 		for (var x in range(demo.length)) {
-			crt('div', '.themes', '.navigator');
-			crt('div', '.point', '.themes[' + x + ']');
-			crt('div', '.theme', '.themes[' + x + ']');
-			get('.theme[' + x + ']').innerHTML = demo[x].theme;
+			crt('div', '.subjects .disactivate', '.navigator');
+			crt('div', '.point', '.subjects[' + x + ']');
+			crt('div', '.subject', '.subjects[' + x + ']');
+			get('.subject[' + x + ']').innerHTML = demo[x].subject;
+			get('.subject[' + x + ']').setAttribute('onclick', 'show.switchTo(' + x + ')');
 		}
 
-		get('.themes[' + this.counter + ']').style.opacity = 1;
+		this.activate(get('.subjects[' + this.counter + ']'));
 	},
 
 	paralax: function paralax() {
@@ -98,13 +118,9 @@ var show = {
 		    y = window.event.pageY,
 		    shiftX = 50 - x * 100 / document.body.clientWidth,
 		    shiftY = 50 - y * 100 / document.body.clientHeight,
-		    infoX = shiftX / 64,
-		    infoY = shiftY / 48,
 		    backX = shiftX / 32 - 5,
 		    backY = shiftY / 24 - 5;
 
-		// get( '.buttons' ).style.transform = `translate3d( ${ infoX }%, ${ infoY }%, 1px)`;
-		// get( '.info' ).style.transform = `translate3d( ${ infoX }%, ${ infoY }%, 1px)`;
 		get('.background').style.transform = 'translate3d( ' + backX + '%, ' + backY + '%, 0.05px )';
 	},
 

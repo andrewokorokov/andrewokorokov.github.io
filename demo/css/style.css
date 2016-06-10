@@ -121,14 +121,14 @@ button:active {
   width: 60vw;
   transition: opacity 0.4s;
 }
-.theme-title {
+.subject-title {
   margin-bottom: 0;
 }
 .start-title {
   font-size: 8vw;
   margin-top: 10vh;
 }
-.theme-description {
+.subject-description {
   width: 40vw;
   opacity: 0.5;
 }
@@ -154,7 +154,7 @@ button:active {
   margin-top: 0;
   margin-bottom: 0;
 }
-.speaker-ocupation {
+.speaker-occupation {
   margin-bottom: 3px;
 }
 .buttons {
@@ -176,11 +176,15 @@ button:active {
   padding: 10vh 0;
   height: 100vh;
 }
-.themes {
+.subjects {
   display: flex;
   align-items: center;
-  opacity: 0.3;
   transition: opacity 0.8s;
+}
+.subjects:hover {
+  opacity: 1;
+  cursor: pointer;
+  border: none;
 }
 .point {
   background: #fff;
@@ -189,7 +193,7 @@ button:active {
   border-radius: 50%;
   margin-right: 10px;
 }
-.theme {
+.subject {
   text-align: left;
   width: 130px;
   font-size: 13px;

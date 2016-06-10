@@ -56,6 +56,16 @@ function crt(tag, name, parent) {
 }
 
 /**
+*		Function ClearNode
+*/
+
+function clearNode(parent) {
+	while (parent.childNodes.item(0)) {
+		parent.removeChild(parent.childNodes.item(0));
+	}
+}
+
+/**
 *		Function Range
 */
 
