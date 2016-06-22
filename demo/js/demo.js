@@ -1,7 +1,7 @@
 'use strict';
 
 var demo = [{
-	subject: 'Dew Ops optimization',
+	subject: 'Dev Ops optimization',
 	speaker: people.alexp,
 	desc: ''
 }, {
