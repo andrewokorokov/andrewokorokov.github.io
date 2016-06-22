@@ -135,9 +135,9 @@ var show = {
 	}
 };
 
-document.body.onmousemove = function () {
-	show.paralax();
-};
+// document.body.onmousemove = function () {
+// 	show.paralax();
+// }
 
 document.body.onkeydown = function () {
 	show.onkeys();
