@@ -5,27 +5,35 @@ var demo = [{
 	speaker: people.alexp,
 	desc: ''
 }, {
-	subject: 'Affiliate Promo Tools: Banners',
-	speaker: [people.nightwoolf, people.knoxville],
+	subject: 'Affiliate Profit & Loss Report - search by traffic tags',
+	speaker: people.columbus,
 	desc: ''
 }, {
-	subject: 'MC Profits Affiliate Area fill in',
-	speaker: people.knoxville,
-	desc: ''
-}, {
-	subject: 'Live show server-to-server feed investigate',
-	speaker: people.goofy,
-	desc: ''
-}, {
-	subject: 'HTTP Live show streaming',
-	speaker: people.kai,
-	desc: ''
-}, {
-	subject: 'Root admin Opt-in',
+	subject: 'Root admin MCProfits models approval',
 	speaker: people.novemberMike,
 	desc: ''
 }, {
-	subject: 'Model account: Payout history',
+	subject: 'MCProfits.com affiliate area',
+	speaker: people.knoxville,
+	desc: ''
+}, {
+	subject: 'MCProfits promo tools banners',
+	speaker: [people.nightwoolf, people.knoxville],
+	desc: ''
+}, {
+	subject: 'Promo tools - FHGs',
+	speaker: [people.nightwoolf, people.knoxville],
+	desc: ''
+}, {
+	subject: 'Models Payouts History',
 	speaker: people.columbus,
+	desc: ''
+}, {
+	subject: 'Live Shows server-to-server feed investigate',
+	speaker: people.goofy,
+	desc: ''
+}, {
+	subject: 'Live Show HLS support & responsive LS client',
+	speaker: [people.goofy, people.kai],
 	desc: ''
 }];
