@@ -169,6 +169,7 @@ table {
   -webkit-margin-after: 0;
 }
 body {
+  display: initial;
   background: #000;
   font-family: 'Dosis';
   font-size: 13px;
@@ -187,12 +188,14 @@ ul {
   display: flex;
 }
 header {
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 50px;
   padding: 0 6.25vw 0 6.25vw;
-  background: #201c1e;
+  background: #201e24;
+  z-index: 2;
 }
 .menu-icon {
   cursor: pointer;
@@ -226,28 +229,23 @@ header {
   margin: 0;
 }
 nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   left: -300px;
+  padding: 5vh 0;
   width: 300px;
   height: 100vh;
-  background: #201c1e;
-  transition: left 0.8s cubic-bezier(0.7, 0, 0.3, 1);
-  z-index: 3;
+  background: #1b1a1f;
+  transition: left 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: 4;
 }
 .main-menu,
 .user-menu {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-.main-menu {
-  margin-top: 10vh;
-}
-.user-menu {
-  margin-bottom: 10vh;
 }
 .main-menu-item,
 .user-menu-item {
@@ -264,79 +262,84 @@ nav {
 .user-menu-item:last-child {
   margin: 0;
 }
+.messages-counter {
+  opacity: 0.3;
+}
 #animate-hover {
   margin-left: 0px;
   transition: margin-left 0.8s;
 }
 .shop-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   left: -300px;
-  padding: 10vw 0;
+  padding: 5vh 0;
   width: 300px;
   height: 100vh;
-  background: rgba(32,28,30,0.9);
-  transition: left 0.8s cubic-bezier(0.7, 0, 0.3, 1);
-  z-index: 2;
+  background: #19171c;
+  transition: left 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: 3;
 }
 .shop-menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15px;
+  width: 256px;
+  height: 144px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 .shop-menu-item h3 {
   cursor: pointer;
   transition: opacity 0.4s;
+  z-index: 5;
 }
 .shop-menu-item h3:hover {
   opacity: 0.6;
 }
 .shop-menu-item-cover {
-  margin-bottom: 5px;
   width: 256px;
   height: 144px;
-  background: #000;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-.closer {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  cursor: pointer;
-  transition: opacity 0.4s;
+.shader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(32,30,36,0.8);
+  z-index: 4;
 }
-.closer:hover {
-  opacity: 0.6;
+#videos {
+  background: url("../img/frame_01.jpg") no-repeat 0% 0%/cover;
 }
-.closer .closer-line {
-  position: absolute;
-  background: #fff;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
+#photosets {
+  background: url("../img/frame_03.jpg") no-repeat 0% 0%/cover;
 }
-.closer .closer-line:first-child {
-  width: 21px;
-  height: 1px;
-  margin-top: 10px;
+.features {
+  display: flex;
 }
-.closer .closer-line:last-child {
-  width: 1px;
-  height: 21px;
-  margin-left: 10px;
+.features-item {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 25vw;
+  background: rgba(32,30,36,0.7);
+}
+.features-item p {
+  text-align: center;
+}
+.feature-counters {
+  font-size: 30px;
 }
 .slider {
   position: relative;
+  margin-top: 50px;
   width: 100%;
   height: 40vw;
 }
@@ -351,7 +354,8 @@ nav {
 }
 .slides-item {
   position: absolute;
-  background: rgba(32,28,30,0.7);
+  opacity: 0;
+  transition: opacity 2s;
 }
 .points {
   display: flex;
@@ -380,26 +384,18 @@ nav {
 .trigger-points-item:hover {
   opacity: 0.6;
 }
-.features {
-  display: flex;
+#slide_0 {
+  background: url("../img/frame_01.jpg") no-repeat 0% 0%/cover;
 }
-.features-item {
-  display: inherit;
-  justify-content: center;
-  align-items: center;
-  width: 25vw;
-  height: 25vw;
-  background: rgba(32,28,30,0.7);
+#slide_1 {
+  background: url("../img/frame_03.jpg") no-repeat 0% 0%/cover;
 }
-.features-item p {
-  text-align: center;
-}
-.feature-counters {
-  font-size: 30px;
+#slide_2 {
+  background: url("../img/frame_04.jpg") no-repeat 0% 0%/cover;
 }
 .about-me {
   padding: 5vw 12.5vw;
-  background: #201c1e;
+  background: #201e24;
 }
 .about-me h1 {
   margin-bottom: 2vw;

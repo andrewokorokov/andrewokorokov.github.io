@@ -10,7 +10,7 @@ var demo = [{
 	desc: ''
 }, {
 	subject: 'MC Profits Affiliate Area fill in',
-	speaker: people.subzero,
+	speaker: people.knoxville,
 	desc: ''
 }, {
 	subject: 'Live show server-to-server feed investigate',
