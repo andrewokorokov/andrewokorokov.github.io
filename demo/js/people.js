@@ -2,6 +2,12 @@
 
 var people = {
 
+	novemberMike: {
+		name: 'November Mike',
+		occupation: 'Manager',
+		photo: ''
+	},
+
 	kai: {
 		name: 'Kai',
 		occupation: 'Front-end developer',

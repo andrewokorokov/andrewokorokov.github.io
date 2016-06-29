@@ -16,4 +16,16 @@ var demo = [{
 	subject: 'Live show server-to-server feed investigate',
 	speaker: people.goofy,
 	desc: ''
+}, {
+	subject: 'HTTP Live show streaming',
+	speaker: people.kai,
+	desc: ''
+}, {
+	subject: 'Root admin Opt-in',
+	speaker: people.novemberMike,
+	desc: ''
+}, {
+	subject: 'Model account: Payout history',
+	speaker: people.columbus,
+	desc: ''
 }];

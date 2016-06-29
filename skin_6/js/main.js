@@ -11,11 +11,11 @@ var slider = {
 		setInterval(function () {
 			getId('slide_' + this.counter).style.opacity = '0';
 
-			if (this.counter < this.images.length) {
-				this.counter++;
-			} else {
+			if (this.counter > this.images.length - 1) {
 				getId('slide_' + this.counter).style.opacity = '0';
 				this.counter = 0;
+			} else {
+				this.counter++;
 			}
 
 			getId('slide_' + this.counter).style.opacity = '1';
