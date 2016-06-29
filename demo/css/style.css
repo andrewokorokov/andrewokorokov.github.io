@@ -173,7 +173,7 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30vh 0;
+  padding: 20vh 0;
   height: 100vh;
 }
 .subjects {
