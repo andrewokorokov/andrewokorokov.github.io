@@ -1,10 +1,6 @@
 'use strict';
 
 var demo = [{
-	subject: 'Dev Ops optimization',
-	speaker: people.alexp,
-	desc: ''
-}, {
 	subject: 'Affiliate Profit & Loss Report - search by traffic tags',
 	speaker: people.columbus,
 	desc: ''
@@ -35,5 +31,9 @@ var demo = [{
 }, {
 	subject: 'Live Show HLS support & responsive LS client',
 	speaker: [people.goofy, people.kai],
+	desc: ''
+}, {
+	subject: 'Dev Ops optimization',
+	speaker: people.alexp,
 	desc: ''
 }];
