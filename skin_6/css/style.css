@@ -329,7 +329,7 @@ nav {
   align-items: center;
   width: 25vw;
   height: 25vw;
-  background: rgba(32,30,36,0.7);
+  background: #1b1a1f;
 }
 .features-item p {
   text-align: center;
@@ -375,23 +375,22 @@ nav {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  cursor: pointer;
   transition: opacity 0.4s;
 }
 .trigger-points-item:last-child {
   margin: 0;
 }
 .trigger-points-item:hover {
-  opacity: 0.6;
+  cursor: pointer;
 }
 #slide_0 {
-  background: url("../img/frame_01.jpg") no-repeat 0% 0%/cover;
+  background: #141316;
 }
 #slide_1 {
-  background: url("../img/frame_03.jpg") no-repeat 0% 0%/cover;
+  background: #141316;
 }
 #slide_2 {
-  background: url("../img/frame_04.jpg") no-repeat 0% 0%/cover;
+  background: #141316;
 }
 .about-me {
   padding: 5vw 12.5vw;
@@ -428,4 +427,95 @@ nav {
 }
 .social-links-item:hover {
   opacity: 0.6;
+}
+.join-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 12.5vw;
+  background: #1b1a1f;
+}
+.join-title {
+  margin-right: 30px;
+  font-size: 2.5vw;
+}
+.join-button {
+  width: 20vw;
+  height: 40px;
+  background: #fff;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  color: #201e24;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.video-block {
+  display: flex;
+}
+.inverse {
+  flex-direction: row-reverse;
+}
+.inverse .video-description:after {
+  left: 50vw;
+  border: 3vw solid transparent;
+  border-left: 3vw solid #201e24;
+}
+.video-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: calc(56.25vw / 2);
+}
+.play-button {
+  width: 6vw;
+  height: 6vw;
+  border: 3vw solid transparent;
+  border-left: 5vw solid #fff;
+  transform: translate(20%, 0%);
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+.play-button:hover {
+  opacity: 0.6;
+}
+.video-description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: calc(56.25vw / 2);
+  padding: 3vw;
+  background: #201e24;
+}
+.video-description .text {
+  text-align: center;
+  opacity: 0.3;
+}
+.video-description:after {
+  position: absolute;
+  top: 3vw;
+  left: -6vw;
+  content: '';
+  border: 3vw solid transparent;
+  border-right: 3vw solid #201e24;
+}
+.content-title {
+  font-size: 2vw;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+.content-title:hover {
+  opacity: 0.6;
+}
+#cover_0 {
+  background: #1b1a1f;
+}
+#cover_1 {
+  background: #1b1a1f;
 }
