@@ -2,27 +2,27 @@
 
 var demo = [{
 	subject: 'Affiliate Profit & Loss Report - search by traffic tags',
-	speaker: people.columbus,
+	speaker: people.invizime,
 	desc: ''
 }, {
 	subject: 'Root admin MCProfits models approval',
-	speaker: people.novemberMike,
+	speaker: people.johndoe,
 	desc: ''
 }, {
 	subject: 'MCProfits.com affiliate area',
-	speaker: people.knoxville,
+	speaker: people.kitana,
 	desc: ''
 }, {
 	subject: 'MCProfits promo tools banners',
-	speaker: [people.nightwoolf, people.knoxville],
+	speaker: [people.inox, people.stryker],
 	desc: ''
 }, {
 	subject: 'Promo tools - FHGs',
-	speaker: [people.nightwoolf, people.knoxville],
+	speaker: [people.orange, people.original],
 	desc: ''
 }, {
 	subject: 'Models Payouts History',
-	speaker: people.columbus,
+	speaker: people.topal,
 	desc: ''
 }, {
 	subject: 'Live Shows server-to-server feed investigate',

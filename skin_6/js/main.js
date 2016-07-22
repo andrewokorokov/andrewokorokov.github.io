@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- *		Slider actions
+ *	Slider actions
  */
 
 var slider = {
@@ -57,17 +57,13 @@ var slider = {
 	}
 };
 
-window.onload = function () {
-	slider.init();
-};
-
 /*
  *	Sidebar actions
  */
 
 var trigger = false;
 
-catchClick(getId('menu-icon'), function () {
+catchClick(getId('menu-icon'), function (event) {
 	getId('sidebar-menu').style.left = '0';
 	getId('shop-menu').style.left = '0';
 	event.stopPropagation();
@@ -94,7 +90,7 @@ catchMouseOut(getId('shop-menu'), function () {
 	getTag('body').style.cursor = 'url(./img/close_cursor.png), auto';
 });
 
-catchClick(getId('sidebar-menu'), function () {
+catchClick(getId('sidebar-menu'), function (event) {
 	event.stopPropagation();
 });
 
@@ -114,6 +110,68 @@ setInterval(function () {
 		getId('animate-hover').style.marginLeft = '0';
 	}, 800);
 }, 1600);
+
+/*
+ *	Live show banner
+ */
+
+var liveShowBanner = {
+	sec: getId('counter-seconds'),
+	min: getId('counter-minute'),
+	hrs: getId('counter-hour'),
+	day: getId('counter-day'),
+	// date: new Date( 2016, 11, 15, 17, 00, 00 ),
+
+	init: function init() {
+		var seconds, minutes, hours, days;
+
+		this.sec.innerHTML = seconds = 5;
+		this.min.innerHTML = minutes = 0;
+		this.hrs.innerHTML = hours = 11;
+		this.day.innerHTML = days = 21;
+
+		var timer = setInterval(function () {
+			seconds -= 1;
+			this.sec.innerHTML = seconds;
+
+			if (seconds < 0) {
+				seconds = 59;
+				this.sec.innerHTML = seconds;
+				minutes -= 1;
+				this.min.innerHTML = minutes;
+			}
+
+			if (minutes < 0) {
+				minutes = 59;
+				this.min.innerHTML = minutes;
+				hours -= 1;
+				this.hrs.innerHTML = hours;
+			}
+
+			if (hours < 0) {
+				hours = 23;
+				this.hrs.innerHTML = hours;
+				days -= 1;
+				this.day.innerHTML = days;
+			}
+
+			if (days < 0) {
+				clearInterval(timer);
+			}
+		}.bind(this), 1000);
+	}
+};
+
+/*
+ *	Run functions
+ */
+
+window.onload = function () {
+	if (getId('home')) {
+		slider.init();
+		liveShowBanner.init();
+	}
+};
 
 /*
  *	Wrapper functions
