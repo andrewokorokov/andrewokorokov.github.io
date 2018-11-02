@@ -1,2 +1,2 @@
-# andrewokorokov.github.io
+# andrewokorokov.io
 study
